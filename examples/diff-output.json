@@ -1,0 +1,35 @@
+{
+  "beforeTimestamp" : "2024-01-15T10:30:00Z",
+  "afterTimestamp" : "2024-01-15T11:45:00Z",
+  "topicsAdded" : [ "notifications" ],
+  "topicsRemoved" : null,
+  "topicChanges" : [ {
+    "topic" : "events",
+    "field" : "config.retention.ms",
+    "before" : "604800000",
+    "after" : "864000000"
+  } ],
+  "partitionChanges" : [ {
+    "topic" : "events",
+    "partition" : 2,
+    "field" : "leader",
+    "before" : "3",
+    "after" : "1"
+  }, {
+    "topic" : "events",
+    "partition" : 2,
+    "field" : "isr",
+    "before" : "[3, 1, 2]",
+    "after" : "[1, 2]"
+  } ],
+  "consumerGroupChanges" : [ {
+    "groupId" : "event-processor",
+    "changeType" : "memberCount",
+    "details" : "2 -> 3"
+  }, {
+    "groupId" : "notification-consumer",
+    "changeType" : "added",
+    "details" : "state=Stable, members=1"
+  } ],
+  "offsetChanges" : null
+}

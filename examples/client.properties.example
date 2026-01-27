@@ -1,0 +1,35 @@
+# Example Kafka client configuration
+# Copy to client.properties and update with your credentials
+
+# Basic connection
+# bootstrap.servers=localhost:9092
+
+# SASL/PLAIN with SSL
+# security.protocol=SASL_SSL
+# sasl.mechanism=PLAIN
+# sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="your-username" password="your-password";
+# ssl.endpoint.identification.algorithm=https
+
+# SASL/SCRAM with SSL
+# security.protocol=SASL_SSL
+# sasl.mechanism=SCRAM-SHA-256
+# sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="your-username" password="your-password";
+
+# SSL Mutual TLS
+# security.protocol=SSL
+# ssl.truststore.location=/path/to/truststore.jks
+# ssl.truststore.password=truststore-password
+# ssl.keystore.location=/path/to/keystore.jks
+# ssl.keystore.password=keystore-password
+# ssl.key.password=key-password
+
+# AWS MSK IAM
+# security.protocol=SASL_SSL
+# sasl.mechanism=AWS_MSK_IAM
+# sasl.jaas.config=software.amazon.msk.auth.iam.IAMLoginModule required;
+# sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbackHandler
+
+# Connection timeout settings
+# request.timeout.ms=30000
+# session.timeout.ms=30000
+# metadata.max.age.ms=300000

@@ -1,0 +1,160 @@
+{
+  "schemaVersion" : 1,
+  "toolVersion" : "0.1.0",
+  "timestamp" : "2024-01-15T11:45:00Z",
+  "cluster" : {
+    "kafkaVersion" : "unknown",
+    "brokers" : [ {
+      "id" : 1,
+      "rack" : "us-west-2a"
+    }, {
+      "id" : 2,
+      "rack" : "us-west-2b"
+    }, {
+      "id" : 3,
+      "rack" : "us-west-2c"
+    } ]
+  },
+  "topics" : [ {
+    "name" : "events",
+    "partitionCount" : 6,
+    "replicationFactor" : 3,
+    "partitions" : [ {
+      "partition" : 0,
+      "leader" : 1,
+      "replicas" : [ 1, 2, 3 ],
+      "isr" : [ 1, 2, 3 ]
+    }, {
+      "partition" : 1,
+      "leader" : 2,
+      "replicas" : [ 2, 3, 1 ],
+      "isr" : [ 2, 3, 1 ]
+    }, {
+      "partition" : 2,
+      "leader" : 1,
+      "replicas" : [ 3, 1, 2 ],
+      "isr" : [ 1, 2 ]
+    }, {
+      "partition" : 3,
+      "leader" : 1,
+      "replicas" : [ 1, 2, 3 ],
+      "isr" : [ 1, 2, 3 ]
+    }, {
+      "partition" : 4,
+      "leader" : 2,
+      "replicas" : [ 2, 3, 1 ],
+      "isr" : [ 2, 3, 1 ]
+    }, {
+      "partition" : 5,
+      "leader" : 3,
+      "replicas" : [ 3, 1, 2 ],
+      "isr" : [ 3, 1, 2 ]
+    } ],
+    "config" : {
+      "retention.ms" : "864000000",
+      "cleanup.policy" : "delete",
+      "min.insync.replicas" : "2"
+    }
+  }, {
+    "name" : "notifications",
+    "partitionCount" : 3,
+    "replicationFactor" : 3,
+    "partitions" : [ {
+      "partition" : 0,
+      "leader" : 1,
+      "replicas" : [ 1, 2, 3 ],
+      "isr" : [ 1, 2, 3 ]
+    }, {
+      "partition" : 1,
+      "leader" : 2,
+      "replicas" : [ 2, 3, 1 ],
+      "isr" : [ 2, 3, 1 ]
+    }, {
+      "partition" : 2,
+      "leader" : 3,
+      "replicas" : [ 3, 1, 2 ],
+      "isr" : [ 3, 1, 2 ]
+    } ],
+    "config" : {
+      "retention.ms" : "86400000",
+      "cleanup.policy" : "delete"
+    }
+  }, {
+    "name" : "orders",
+    "partitionCount" : 3,
+    "replicationFactor" : 3,
+    "partitions" : [ {
+      "partition" : 0,
+      "leader" : 1,
+      "replicas" : [ 1, 2, 3 ],
+      "isr" : [ 1, 2, 3 ]
+    }, {
+      "partition" : 1,
+      "leader" : 2,
+      "replicas" : [ 2, 3, 1 ],
+      "isr" : [ 2, 3, 1 ]
+    }, {
+      "partition" : 2,
+      "leader" : 3,
+      "replicas" : [ 3, 1, 2 ],
+      "isr" : [ 3, 1, 2 ]
+    } ],
+    "config" : {
+      "retention.ms" : "2592000000",
+      "cleanup.policy" : "delete"
+    }
+  } ],
+  "consumerGroups" : [ {
+    "groupId" : "event-processor",
+    "state" : "Stable",
+    "memberCount" : 3,
+    "assignments" : [ {
+      "topic" : "events",
+      "partition" : 0
+    }, {
+      "topic" : "events",
+      "partition" : 1
+    }, {
+      "topic" : "events",
+      "partition" : 2
+    }, {
+      "topic" : "events",
+      "partition" : 3
+    }, {
+      "topic" : "events",
+      "partition" : 4
+    }, {
+      "topic" : "events",
+      "partition" : 5
+    } ]
+  }, {
+    "groupId" : "notification-consumer",
+    "state" : "Stable",
+    "memberCount" : 1,
+    "assignments" : [ {
+      "topic" : "notifications",
+      "partition" : 0
+    }, {
+      "topic" : "notifications",
+      "partition" : 1
+    }, {
+      "topic" : "notifications",
+      "partition" : 2
+    } ]
+  }, {
+    "groupId" : "order-consumer",
+    "state" : "Stable",
+    "memberCount" : 1,
+    "assignments" : [ {
+      "topic" : "orders",
+      "partition" : 0
+    }, {
+      "topic" : "orders",
+      "partition" : 1
+    }, {
+      "topic" : "orders",
+      "partition" : 2
+    } ]
+  } ],
+  "offsetsCaptured" : false
+}
